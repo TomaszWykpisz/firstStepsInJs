@@ -123,3 +123,45 @@ console.log(tab1.map((el)=>{ return el * 2 }));
 console.log(tab1.filter((el)=>{ return el % 2 === 0 }));
 
 ////
+// OBJECT
+
+var person = {
+	name : "Tomek",
+	age : 30,
+	getName : function(){
+		return this.name;
+	},
+	setName : function(newName){
+		this.name = newName;
+	}
+}
+
+console.log(person.name);
+person.setName("Karol");
+console.log(person.name);
+
+// Usuwanie właściwości/metod
+delete person.name;
+console.log(person.name);
+
+for(let key in person){
+	console.log(person[key]);
+}
+
+class Human{
+	constructor(name, age){
+		this.name = name;
+		this.age = age;
+		this.numOfLegs = 2;
+	}
+	sayYourName(){
+		return `Jestem ${this.name}`;
+	}
+}
+
+var people = [
+	new Human("Tomek", 21),
+	new Human("Kamil", 30),
+	new Human("Jakub", 15)
+];
+console.log(people[1].sayYourName());
