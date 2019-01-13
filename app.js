@@ -43,3 +43,16 @@ console.log(text1.replace("Ala", "Ola"));
 console.log(encodeURIComponent(text1));
 
 ////
+// Function
+
+function add(){
+	let sum = 0;
+	for(let i = 0; i<arguments.length; i++)
+		sum += arguments[i];
+	return sum;
+}
+console.log(add(1));
+console.log(add(2,5));
+console.log(add(3,5,7,1,2));
+
+////
